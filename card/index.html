@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: #aaa;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #fff;
+            width: 320px;
+        }
+        .card-details{
+            padding: 10px 0;
+        }
+        h1{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .product-details{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .price{
+            font-size: 20px;
+            font-weight: 700;
+            color: red;
+            margin:10px 0;
+        }
+        button{
+            width: 100%;
+            background-color: rgb(31, 31, 196);
+            padding: 5px 0;
+            border: none;
+            color: #fff;
+            font-size: 19px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./bag-image.jpg" height="200px" alt="">
+            <div class="card-details">
+                <h1 >Women Lether Bag</h1>
+                <p class="product-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nostrum libero culpa maiores quae, repellendus officiis ipsam? Tempore, fugiat voluptas?</p>
+                <p class="price">$300</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
