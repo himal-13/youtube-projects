@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .images{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            padding: 30px;
+            border-radius: 12px;
+            background-color: #fff;
+        }
+        .images img{
+            transition:all ease .3s;
+            filter: blur(3px);
+            position: relative;
+            cursor: none;
+            filter: drop-shadow(1px 1px 5px);
+
+        }
+        .images img:hover{
+            scale: 1.1;
+            filter: none;
+            z-index: 10;
+
+        }
+
+        @media screen and (max-width:800px){
+            .images{
+                grid-template-columns: 1fr 1fr;
+            }
+            
+        }
+        @media screen and (max-width:600px){
+            .images{
+                grid-template-columns: 1fr;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Images Gallary</h1>
+        <div class="images">
+            <img src="https://picsum.photos/id/247/200/300" alt="">
+            <img src="https://picsum.photos/id/267/200/300" alt="">
+            <img src="https://picsum.photos/id/235/200/300" alt="">
+            <img src="https://picsum.photos/id/237/200/300" alt="">
+            <img src="https://picsum.photos/id/235/200/300" alt="">
+            <img src="https://picsum.photos/id/238/200/300" alt="">
+            <img src="https://picsum.photos/id/239/200/300" alt="">
+            <img src="https://picsum.photos/id/240/200/300" alt="">
+            <img src="https://picsum.photos/id/241/200/300" alt="">
+            <img src="https://picsum.photos/id/242/200/300" alt="">
+
+
+        </div>
+
+</body>
+</html>
