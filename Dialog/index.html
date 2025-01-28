@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: #adc;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+        }
+        .show-dialog{
+            padding: 10px 20px;
+            background-color: #23f;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            
+
+        }
+        .show-dialog:hover{
+            background-color: #67f;
+        }
+        .overlay{
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            background-color: #234;
+            z-index: 10000000000000000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .dialog{
+            padding: 20px;
+            background-color: #fff;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #000;
+
+
+        }
+        .dialog h3{
+            font-size: 35px;
+        }
+        .dialog p{
+            font-size: 14px;
+        }
+        .close-dialog{
+            background-color: #23f;
+            padding: 8px 15px;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 1rem 0;
+        }
+        .close-dialog:hover{
+            background-color: #56f;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="">
+        <button class="show-dialog" id="show-dialog">Show Dialog</button>
+    </div>
+        <div class="overlay" id="overlay">
+            <div class="dialog" id="dialog">
+                <h3>This is dialog</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eos dolorum rerum nesciunt quibusdam hic reiciendis ex officia rem voluptatem?</p>
+                <button class="close-dialog" id="close-dialog">Close Dialog</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const showDialog = document.getElementById('show-dialog')
+        const closeDialog = document.getElementById('close-dialog')
+        const overlay = document.getElementById("overlay")
+
+        showDialog.addEventListener('click',function(){
+            overlay.style.display="flex"
+        })
+        
+        closeDialog.addEventListener('click',function(){
+            overlay.style.display ="none"
+        })
+        overlay.addEventListener('click',function(event){
+            if(event.target === overlay){
+                overlay.style.display = 'none';
+            }
+        })
+    </script>
+</body>
+</html>
